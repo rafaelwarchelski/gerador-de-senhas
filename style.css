@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+
+:root{
+    --branco: #e8e8e8;
+    --cor-de-fundo: #121212;
+    --fundo-senha: #1e2a3a;
+    --fundo-texto: #1e1e2a;
+    --borda: #3b6ea5;
+    --roboto: 'Roboto', sans-serif;
+    --roboto-mono: 'Roboto Mono', monospace;
+    --texto-claro: #d0d0e0;
+    --destaque: #6a9ec7;
+}
+
+*{
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: var(--texto-claro);
+    background-color: var(--cor-de-fundo);
+    font-family: var(--roboto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.titulo-principal{
+    font-family: var(--roboto-mono);
+    font-size: 2rem;
+    color: #d4e4ff;
+    letter-spacing: 1px;
+}
+
+.titulo-secundario{
+    font-size: 1.2rem;
+    color: #b0c4de;
+    margin-top: 8px;
+}
+
+.conteudo-titulo{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.icone-cadeado {
+    width: 56px;
+    filter: drop-shadow(0 0 6px #3b6ea5);
+    margin-bottom: 8px;
+}
+
+.conteudo-senha{
+    margin-top: 20px; 
+    background: var(--fundo-senha);
+    padding: 20px 24px;
+    border-bottom: 4px solid var(--borda);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.conteudo-senha label {
+    font-weight: 500;
+    color: #b8cce0;
+    font-size: 1.1rem;
+}
+
+#campo-senha{
+    background-color: var(--fundo-senha);
+    border: none;
+    color: #f0f4ff;
+    font-family: var(--roboto-mono);
+    font-size: 1.8rem;
+    flex: 1;
+    min-width: 200px;
+    letter-spacing: 1px;
+}
+
+#campo-senha:focus{
+    outline: none;
+}
+
+.conteudo{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    background: #181820;
+    padding: 30px 30px 20px;
+    border-radius: 28px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+}
+
+.parametro{
+    background-color: var(--fundo-texto);
+    border: 1px solid var(--borda);
+    margin-top: 32px;
+    padding: 28px 20px;
+    border-radius: 20px;
+}
+
+.parametro-titulo{
+    font-family: var(--roboto-mono);
+    font-size: 1.6rem;
+    color: #b8d0f0;
+    margin-bottom: 20px;
+}
+
+.parametro-senha__titulo{
+    font-size:1.2rem;
+    color: #c8d8f0;
+    margin-bottom: 10px;
+}
+
+.parametro-coluna__senha{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.parametro-senha{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.parametro-senha-botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parametro-senha__botao{
+    background-color: #2a2a3e;
+    color: var(--branco);
+    border: 2px solid var(--borda);
+    padding: 12px 24px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s;
+    min-width: 60px;
+}
+.parametro-senha__botao:hover {
+    background-color: #3b4a6a;
+    border-color: #6a9ec7;
+}
+
+.parametro-senha__texto{
+    padding: 12px 20px;
+    border-top: 2px solid var(--borda);
+    border-bottom: 2px solid var(--borda);
+    margin: 0 4px;
+    font-size: 1.8rem;
+    min-width: 60px;
+    text-align: center;
+    background: #12121e;
+    color: #e0ecff;
+}
+
+.parametro-senha-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0;
+}
+
+label{
+    font-size: 1.05rem;
+    color: #c0d0e8;
+}
+
+.checkbox{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #3b6ea5;
+}
+
+.barra{
+    background-color: #2a3a4a;
+    height: 30px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 6px;
+}
+.forca{
+    height: 30px;
+    position: relative;
+    bottom: 30px;
+    border-radius: 20px;
+    transition: width 0.25s ease;
+    width: 0%;
+}
+.fraca{
+    width: 25%;
+    background-color: #d95b6e; 
+}
+.media{
+    background-color: #e6c45a;
+    width: 50%;
+}
+.forte{
+    background-color: #4bc48a;
+    width: 100%;
+}
+
+.parametro-senha-textos{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #a0b0c8;
+    margin-top: 2px;
+}
+
+.entropia {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #a8c0e0;
+    background: #0f0f1a;
+    padding: 10px 12px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #14141e;
+    color: #9a9ab0;
+    text-align: center;
+    padding: 20px 20px;
+    margin-top: 30px;
+    border-top: 1px solid #2e2e44;
+    font-size: 0.9rem;
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+}
+
+.footer .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer strong {
+    color: #d0d8f0;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #7a8aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #6ab0e6;
+}
+
+@media screen and (min-width: 768px) {
+    .parametro-coluna__senha{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .parametro-senha {
+        flex: 1 1 220px;
+        max-width: 320px;
+    }
+    .conteudo {
+        padding: 40px 40px 30px;
+    }
+}
